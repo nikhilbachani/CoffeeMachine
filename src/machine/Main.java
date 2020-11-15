@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Main {
     static final Scanner scanner = new Scanner(System.in);
+    static final int WATER_PER_CUP_ML = 200;
+    static final int MILK_PER_CUP_ML = 50;
+    static final int BEANS_PER_CUP_G = 15;
 
     public static void main(String[] args) {
         /* Stage 1: Hello, coffee! */
@@ -18,9 +21,10 @@ public class Main {
         /* Stage 2: Machines have needs */
         System.out.println("Write how many cups of coffee you will need:");
         int cupsOfCoffee = scanner.nextInt();
+
         System.out.printf("For %d cups of coffee you will need:%n", cupsOfCoffee);
-        System.out.printf("%d ml of water%n", cupsOfCoffee * 200);
-        System.out.printf("%d ml of milk%n", cupsOfCoffee * 50);
-        System.out.printf("%d g of coffee beans%n", cupsOfCoffee * 15);
+        System.out.printf("%d ml of water%n", cupsOfCoffee * WATER_PER_CUP_ML);
+        System.out.printf("%d ml of milk%n", cupsOfCoffee * MILK_PER_CUP_ML);
+        System.out.printf("%d g of coffee beans%n", cupsOfCoffee * BEANS_PER_CUP_G);
     }
 }
